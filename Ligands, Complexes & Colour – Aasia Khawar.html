@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Transition Metal Complexes Storyboard – Aasia Khawar</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#fff7ec;--card:#ffffff;--ink:#2a1f3d;--mut:#6b5f80;--p:#7c3aed;--o:#f97316;--t:#0ea5e9;--g:#16a34a;--r:#e11d48;--line:#e8dcc8}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17122a;--card:#241c3f;--ink:#f3ecff;--mut:#b6a9d4;--line:#3b2f63}}
+:root[data-theme="dark"]{--bg:#17122a;--card:#241c3f;--ink:#f3ecff;--mut:#b6a9d4;--line:#3b2f63}
+html{scroll-padding-top:70px;scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Georgia,'Times New Roman',serif}
+h1,h2,h3,button,.chip{font-family:'Trebuchet MS',Verdana,sans-serif}
+header{padding:28px 18px 22px;text-align:center;background:linear-gradient(120deg,#7c3aed,#ec4899 55%,#f97316);color:#fff}
+header h1{margin:6px 0;font-size:clamp(24px,5vw,40px)}
+header .by{font-size:20px;font-weight:700;letter-spacing:.5px}
+nav{position:sticky;top:0;z-index:5;background:var(--card);border-bottom:2px solid var(--line);display:flex;gap:6px;overflow-x:auto;padding:8px 10px;align-items:center}
+.chip{white-space:nowrap;padding:5px 12px;border-radius:99px;background:var(--bg);color:var(--ink);text-decoration:none;font-size:13px;border:1px solid var(--line)}
+#score{margin-left:auto;white-space:nowrap;font:700 13px 'Trebuchet MS',sans-serif;color:var(--p)}
+main{max-width:860px;margin:0 auto;padding:10px 14px 50px}
+section{background:var(--card);border-radius:20px;padding:20px;margin:22px 0;border-top:8px solid var(--c);box-shadow:0 4px 18px #0001}
+section h2{margin:0 0 4px;color:var(--c)}
+.sub{color:var(--mut);margin:0 0 12px}
+.box{background:var(--bg);border-radius:14px;padding:12px;margin:12px 0;border:1px dashed var(--c)}
+button{cursor:pointer;border:0;border-radius:10px;padding:8px 14px;margin:3px;background:var(--c,var(--p));color:#fff;font-size:14px}
+button.alt{background:var(--bg);color:var(--ink);border:1px solid var(--line)}
+svg{width:100%;height:auto;max-height:340px}
+svg text{fill:var(--ink);font-family:'Trebuchet MS',sans-serif;font-size:13px}
+.q{margin:14px 0;padding:12px;border-radius:14px;background:var(--bg)}
+.q b{display:block;margin-bottom:6px}
+.o{display:block;width:100%;text-align:left;background:var(--card);color:var(--ink);border:2px solid var(--line)}
+.o.ok{border-color:var(--g);background:#16a34a22}.o.no{border-color:var(--r);background:#e11d4822}
+.why{display:none;margin-top:6px;font-size:14px;color:var(--mut)}
+details{margin:8px 0;padding:10px;border-radius:12px;background:var(--bg);border-left:5px solid var(--c)}
+summary{cursor:pointer;font-weight:700}
+.bar{height:26px;border-radius:8px;background:var(--c);width:0;transition:width 1s;color:#fff;padding:2px 8px;font:700 13px sans-serif;margin:6px 0}
+.tag{display:inline-block;padding:2px 10px;border-radius:99px;background:var(--c);color:#fff;font:12px sans-serif}
+footer{text-align:center;padding:24px;color:var(--mut);font-size:14px}
+#lig circle.l{transition:cx 1.2s,cy 1.2s}
+.fade{transition:all 1s}
+</style></head><body>
+<header>
+<div class="by">Created by Aasia Khawar</div>
+<h1>Ligands, Complexes &amp; Colour</h1>
+<div>A Level Chemistry (CIE) · Transition Metal Storyboard · Chapter 24</div>
+</header>
+<nav>
+<a class="chip" href="#s1">1 Ligands</a><a class="chip" href="#s2">2 Oxidation no.</a><a class="chip" href="#s3">3 Isomers</a><a class="chip" href="#s4">4 Substitution</a><a class="chip" href="#s5">5 Stability</a><a class="chip" href="#s6">6 Colour</a><a class="chip" href="#s7">Exam practice</a>
+<span id="score">Score 0/0</span>
+</nav>
+<main>
+
+<section id="s1" style="--c:#7c3aed">
+<h2>Scene 1 · Ligands and complex ions</h2>
+<p class="sub">A ligand is a molecule or ion with a lone pair that it donates to a transition metal ion, forming a dative (co-ordinate) bond. Press the button and watch six water ligands bond to Fe²⁺.</p>
+<svg id="lig" viewBox="0 0 400 300"><rect width="400" height="300" fill="none"/>
+<g id="bonds"></g><circle cx="200" cy="150" r="24" fill="#f97316"/><text x="200" y="155" text-anchor="middle" style="fill:#fff;font-weight:700">Fe²⁺</text><g id="ls"></g></svg>
+<button onclick="donate(1)">Donate lone pairs ➜</button><button class="alt" onclick="donate(0)">Reset</button>
+<div class="box" id="ligtxt">Six ligands = co-ordination number 6, octahedral shape. The ion is [Fe(H₂O)₆]²⁺, hexaaquairon(II).</div>
+<p><span class="tag">Common ligands</span> H₂O, NH₃ (monodentate, 1 bond) · Cl⁻ gives tetrahedral [CuCl₄]²⁻ (CN 4) · CN⁻ can give square planar [Ni(CN)₄]²⁻ · ox²⁻ and en are bidentate (2 bonds) · EDTA⁴⁻ is hexadentate (6 bonds).</p>
+<div class="quiz" data-k="1"></div>
+</section>
+
+<section id="s2" style="--c:#0ea5e9">
+<h2>Scene 2 · Oxidation number of the metal</h2>
+<p class="sub">Charge on complex = metal oxidation number + sum of ligand charges. Pick a complex to see the working (Question 4a).</p>
+<div id="oxb"></div>
+<div class="box" id="oxout">Tap a complex ☝</div>
+<div class="quiz" data-k="2"></div>
+</section>
+
+<section id="s3" style="--c:#ec4899">
+<h2>Scene 3 · Stereoisomerism in complexes</h2>
+<p class="sub">Geometric (cis/trans) isomers have the same formula but different arrangements. Optical isomers are non-superimposable mirror images.</p>
+<h3>Geometric: Pt(NH₃)₂Cl₂ square planar</h3>
+<svg viewBox="0 0 400 190"><g id="pt"></g></svg>
+<button style="--c:#ec4899" onclick="pt('cis')">cis-platin</button><button style="--c:#ec4899" onclick="pt('trans')">trans-platin</button>
+<div class="box" id="pttxt">cis-platin: Cl atoms next to each other. It binds DNA in cancer cells and stops cell division.</div>
+<h3>Optical: [Ni(en)₃]²⁺ octahedral</h3>
+<svg viewBox="0 0 400 200"><line x1="200" y1="10" x2="200" y2="190" stroke="#999" stroke-dasharray="5"/>
+<text x="200" y="10" text-anchor="middle">mirror</text>
+<g id="m1" transform="translate(100,100)"></g><g id="m2" class="fade" transform="translate(100,100)"></g></svg>
+<button style="--c:#ec4899" onclick="mirror(1)">Reflect it 🪞</button><button style="--c:#ec4899" onclick="mirror(2)">Try to superimpose</button>
+<div class="box" id="mtxt">Press reflect: the image has the same bonds but is a different molecule.</div>
+<div class="quiz" data-k="3"></div>
+</section>
+
+<section id="s4" style="--c:#f97316">
+<h2>Scene 4 · Ligand substitution of copper(II)</h2>
+<p class="sub">Add reagents to the flask and watch the ligands swap. The position of equilibrium moves to the more stable complex.</p>
+<svg viewBox="0 0 400 240"><path d="M165 20h70v70l60 120q6 16-12 16H117q-18 0-12-16l60-120z" fill="none" stroke="var(--ink)" stroke-width="3"/>
+<path id="liq" d="M140 150h120l35 70q6 10-12 10H117q-18 0-12-10z" fill="#38bdf8" class="fade"/><text id="lname" x="200" y="205" text-anchor="middle" style="fill:#fff;font-weight:700">[Cu(H₂O)₆]²⁺</text></svg>
+<button style="--c:#16a34a" onclick="cu('hcl')">+ conc HCl</button><button style="--c:#0ea5e9" onclick="cu('h2o')">+ water</button><button style="--c:#1e3a8a" onclick="cu('nh3')">+ conc NH₃</button><button style="--c:#64748b" onclick="cu('oh')">+ NaOH</button>
+<div class="box" id="cutxt">Start: blue [Cu(H₂O)₆]²⁺(aq).</div>
+<div class="quiz" data-k="4"></div>
+</section>
+
+<section id="s5" style="--c:#16a34a">
+<h2>Scene 5 · Stability constants</h2>
+<p class="sub">K<sub>stab</sub> is the equilibrium constant for forming the complex from its ions. Higher value = more stable complex. Bars show log₁₀K<sub>stab</sub> for copper(II) (Table 24.5).</p>
+<div id="bars"></div>
+<div class="box">K<sub>stab</sub> = [[CuCl₄]²⁻] / ([[Cu(H₂O)₆]²⁺][Cl⁻]⁴), units dm¹² mol⁻⁴. Water is left out because it is in huge excess. Bidentate ligands give bigger values than monodentate ones.</div>
+<div class="quiz" data-k="5"></div>
+</section>
+
+<section id="s6" style="--c:#e11d48">
+<h2>Scene 6 · Why complexes are coloured</h2>
+<p class="sub">Ligands split the five 3d orbitals into two sets. Electrons absorb light of energy ΔE = hν to jump up, and we see the leftover colours. Cu²⁺ is 3d⁹.</p>
+<svg viewBox="0 0 400 270">
+<text x="20" y="25">3d orbitals split (octahedral)</text>
+<g id="up"><rect x="150" y="50" width="40" height="22" fill="none" stroke="var(--ink)"/><rect x="210" y="50" width="40" height="22" fill="none" stroke="var(--ink)"/><text x="260" y="66">d(x²–y²), d(z²)</text>
+<text x="158" y="67" fill="#e11d48">↑↓</text><text x="218" y="67">↑</text></g>
+<g id="low"><rect x="110" y="180" width="40" height="22" fill="none" stroke="var(--ink)"/><rect x="160" y="180" width="40" height="22" fill="none" stroke="var(--ink)"/><rect x="210" y="180" width="40" height="22" fill="none" stroke="var(--ink)"/><text x="260" y="196">d(yz), d(xz), d(xy)</text>
+<text x="118" y="197">↑↓</text><text x="168" y="197">↑↓</text><text x="218" y="197">↑↓</text></g>
+<line id="de" x1="85" y1="61" x2="85" y2="191" stroke="var(--ink)" stroke-width="2"/><text x="40" y="130">ΔE</text>
+<circle id="ph" cx="60" cy="230" r="9" fill="#fbbf24"/><text x="75" y="234">photon</text>
+<circle id="swatch" cx="340" cy="235" r="20" fill="#7dd3fc" class="fade"/><text id="sw" x="330" y="272" text-anchor="middle">light blue</text></svg>
+<button style="--c:#e11d48" onclick="shine()">Shine white light 💡</button>
+<button class="alt" onclick="lg('h2o')">Ligand: H₂O</button><button class="alt" onclick="lg('nh3')">Ligand: NH₃</button>
+<div class="box" id="ctxt">Bigger ΔE (NH₃) → different light absorbed → a deep blue colour instead of light blue. Sc³⁺ (3d⁰) and Zn²⁺ (3d¹⁰) are colourless: no electron can make the jump.</div>
+<div class="quiz" data-k="6"></div>
+</section>
+
+<section id="s7" style="--c:#7c3aed">
+<h2>Exam practice · End-of-chapter questions</h2>
+<p class="sub">Try on paper first, then open the model answer. Marks follow the book.</p>
+<div id="ex"></div>
+</section>
+</main>
+<footer>© Aasia Khawar. All rights reserved. Created by Aasia Khawar · A Level Chemistry CIE storyboard<br>Based on the textbook pages supplied.</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+/* Scene 1 */
+const far=[[200,20],[200,280],[20,150],[380,150],[60,60],[340,240]],near=[[200,85],[200,215],[135,150],[265,150],[150,105],[250,195]];
+function donate(on){const g=$('ls'),b=$('bonds');g.innerHTML='';b.innerHTML='';
+ far.forEach((f,i)=>{const p=on?near[i]:f;
+  g.innerHTML+=`<g><circle class="l" cx="${p[0]}" cy="${p[1]}" r="17" fill="#38bdf8"/><text x="${p[0]}" y="${p[1]+4}" text-anchor="middle" style="fill:#fff">H₂O</text></g>`;
+  if(on)b.innerHTML+=`<line x1="${p[0]}" y1="${p[1]}" x2="200" y2="150" stroke="#7c3aed" stroke-width="3" stroke-dasharray="6"/>`});
+ $('ligtxt').textContent=on?'Each O donates a lone pair into a vacant orbital on Fe²⁺: six dative bonds, octahedral. [Fe(H₂O)₆]²⁺, hexaaquairon(II).':'Free water molecules each have lone pairs on oxygen.'}
+donate(0);
+/* Scene 2 */
+const ox=[['[Co(NH₃)₆]³⁺','x + 6(0) = +3','+3'],['[Ni(CN)₄]²⁻','x + 4(–1) = –2 → x = +2','+2'],['[Cr(OH)₆]³⁻','x + 6(–1) = –3 → x = +3','+3'],['[Co(en)₃]³⁺','x + 3(0) = +3','+3'],['Cu(OH)₂(H₂O)₄','x + 2(–1) + 4(0) = 0 → x = +2','+2'],['[CoCl₄]²⁻','x + 4(–1) = –2 → x = +2','+2']];
+$('oxb').innerHTML=ox.map((o,i)=>`<button style="--c:#0ea5e9" onclick="oxs(${i})">${o[0]}</button>`).join('');
+function oxs(i){$('oxout').innerHTML=`<b>${ox[i][0]}</b><br>${ox[i][1]}<br>Oxidation number = <b>${ox[i][2]}</b> (NH₃, en = neutral; CN⁻, OH⁻, Cl⁻ = –1)`}
+/* Scene 3 */
+function pt(t){const c=t=='cis'?[[110,45,'Cl'],[290,45,'NH₃'],[110,145,'Cl'],[290,145,'NH₃']]:[[110,45,'Cl'],[290,45,'NH₃'],[110,145,'NH₃'],[290,145,'Cl']];
+ $('pt').innerHTML=c.map(a=>`<line x1="200" y1="95" x2="${a[0]}" y2="${a[1]}" stroke="#ec4899" stroke-width="3"/><circle cx="${a[0]}" cy="${a[1]}" r="20" fill="${a[2]=='Cl'?'#16a34a':'#38bdf8'}"/><text x="${a[0]}" y="${a[1]+4}" text-anchor="middle" style="fill:#fff">${a[2]}</text>`).join('')+'<circle cx="200" cy="95" r="20" fill="#f97316"/><text x="200" y="99" text-anchor="middle" style="fill:#fff">Pt</text>';
+ $('pttxt').textContent=t=='cis'?'cis-platin: Cl atoms next to each other (same side). Used as an anti-cancer drug.':'trans-platin: Cl atoms opposite each other. Same formula, different properties.'}
+pt('cis');
+function ni(){let s='<circle r="16" fill="#f97316"/><text y="4" text-anchor="middle" style="fill:#fff">Ni</text>';
+ [[0,-70,60,-25],[61,35,10,60],[-61,35,-70,-25]].forEach((a,i)=>{const ang=[-90,30,150][i]*Math.PI/180,x=Math.cos(ang)*65,y=Math.sin(ang)*65,cx=Math.cos(ang+0.9)*85,cy=Math.sin(ang+0.9)*85,x2=Math.cos(ang+0.9)*55,y2=Math.sin(ang+0.9)*55;
+ s+=`<path d="M0 0L${x} ${y}Q${cx*1.15} ${cy*1.15} ${x2*1.0+Math.cos(ang+0.9)*25} ${y2+Math.sin(ang+0.9)*25}" fill="none" stroke="#ec4899" stroke-width="4"/>`});return s}
+$('m1').innerHTML=ni();$('m2').innerHTML=ni();$('m2').setAttribute('transform','translate(100,100)');
+function mirror(k){const m=$('m2');if(k==1){m.setAttribute('transform','translate(300,100) scale(-1,1)');$('mtxt').textContent='Mirror image formed: the two en spirals twist opposite ways. Optical isomers = non-superimposable mirror images.'}
+ else{m.setAttribute('transform','translate(100,100) rotate(180)');$('mtxt').textContent='Rotate it however you like: it never lines up with the original. ✗ Not superimposable → optical isomers.'}}
+/* Scene 4 */
+const cus={start:['#38bdf8','[Cu(H₂O)₆]²⁺','Blue solution.'],hcl:['#d9f20f','[CuCl₄]²⁻','Yellow-green. [Cu(H₂O)₆]²⁺ + 4Cl⁻ ⇌ [CuCl₄]²⁻ + 6H₂O (CN 6 → 4, tetrahedral).'],h2o:['#38bdf8','[Cu(H₂O)₆]²⁺','Excess water shifts equilibrium left: back to light blue.'],nh3:['#1e3a8a','[Cu(H₂O)₂(NH₃)₄]²⁺','Deep blue. Ammonia (log K 4.25 vs 2.80 for Cl⁻) forms the more stable complex, so equilibrium shifts right. Pale blue ppt Cu(OH)₂(H₂O)₄ dissolves.'],oh:['#93c5fd','Cu(OH)₂(H₂O)₄(s)','Pale blue precipitate: [Cu(H₂O)₆]²⁺ + 2OH⁻ → Cu(OH)₂(H₂O)₄ + 2H₂O.']};
+function cu(k){const c=cus[k];$('liq').setAttribute('fill',c[0]);$('lname').textContent=c[1];$('cutxt').textContent=c[2]}
+/* Scene 5 */
+[['Chloride, Cl⁻',5.6],['Ammonia, NH₃',13.1],['2-hydroxybenzoate (bidentate)',16.9],['1,2-dihydroxybenzene (bidentate)',25.0]].forEach(b=>{$('bars').innerHTML+=`<div>${b[0]}</div><div class="bar" data-w="${b[1]/25*100}">${b[1]}</div>`});
+setTimeout(()=>document.querySelectorAll('.bar').forEach(b=>b.style.width=b.dataset.w+'%'),400);
+/* Scene 6 */
+let L='h2o';
+function lg(k){L=k;const d=k=='h2o'?0:-14;$('up').setAttribute('transform',`translate(0,${d})`);$('de').setAttribute('y1',61+d);$('swatch').setAttribute('fill',k=='h2o'?'#7dd3fc':'#1e3a8a');$('sw').textContent=k=='h2o'?'light blue':'deep blue'}
+function shine(){const p=$('ph');p.setAttribute('cx',60);p.setAttribute('cy',230);p.style.transition='none';
+ setTimeout(()=>{p.style.transition='all 1s';p.setAttribute('cx',180);p.setAttribute('cy',190);},50);
+ setTimeout(()=>{p.setAttribute('cy',(L=='h2o'?61:47)+0);p.setAttribute('cx',230);$('ctxt').textContent='Electron absorbs ΔE and jumps to the higher level. The remaining light (blue) passes through, so we see blue.'},1100)}
+/* Quizzes */
+const Q={1:[['What bond forms between a ligand and the metal ion?',['Ionic','Dative (co-ordinate)','Metallic','Hydrogen'],1,'The ligand donates both electrons of a lone pair into a vacant orbital.'],
+['Which ligands in the table are bidentate?',['H₂O and NH₃','Cl⁻ and CN⁻','Ethanedioate (ox) and 1,2-diaminoethane (en)','SCN⁻ and OH⁻'],2,'ox²⁻ and en each have two donor atoms. Question 4c.'],
+['EDTA⁴⁻ is hexadentate. Formula of its complex with Ni²⁺?',['[Ni(EDTA)]²⁻','[Ni(EDTA)₆]²⁻','[Ni(EDTA)]⁶⁻','[Ni(EDTA)]⁴⁺'],0,'One EDTA⁴⁻ gives six bonds. Charge = +2 + (–4) = 2–.']],
+2:[['Oxidation number of Ni in [Ni(CN)₄]²⁻?',['+6','+2','–2','+4'],1,'x + 4(–1) = –2, so x = +2.'],
+['Oxidation number of Co in [Co(en)₃]³⁺?',['+3','+6','+1','0'],0,'en is neutral so Co = +3.'],
+['Blue cobalt chloride paper: oxidation number of Co in [CoCl₄]²⁻?',['+4','+2','–2','+1'],1,'x + 4(–1) = –2 gives +2 (Question 6a).']],
+3:[['In cis-platin the two Cl atoms are…',['Opposite each other','Next to each other','Both on Pt axis','Replaced by NH₃'],1,'cis = same side.'],
+['Why are the two [Ni(en)₃]²⁺ structures stereoisomers?',['Different formulae','They are mirror images that cannot be superimposed','Different oxidation states','Different ligands'],1,'This is optical isomerism.'],
+['Geometric isomers of Ni(CN)₂Cl₂²⁻ are possible because it is…',['Tetrahedral','Square planar','Linear','Octahedral'],1,'Square planar complexes show cis/trans isomerism (Question 5b); tetrahedral ones do not.']],
+4:[['Which colour is [CuCl₄]²⁻?',['Deep blue','Pale blue','Yellow','Pink'],2,'Conc HCl gives a yellow solution (yellow-green).'],
+['Why does excess NH₃ turn [CuCl₄]²⁻ deep blue?',['Cl⁻ is oxidised','NH₃ complex has the higher K(stab)','Water evaporates','Cu is reduced'],1,'Equilibrium shifts towards the more stable ammonia complex.'],
+['Pink [Co(H₂O)₆]²⁺ + 4Cl⁻ gives…',['[CoCl₄]²⁻ + 6H₂O','[CoCl₆]⁴⁻ + 6H₂O','Co(OH)₂','[Co(NH₃)₆]²⁺'],0,'Cobalt(II) forms tetrahedral complexes with Cl⁻.']],
+5:[['Which complex of copper is most stable?',['Chloride (5.6)','Ammonia (13.1)','1,2-dihydroxybenzene (25.0)','All equal'],2,'Highest log K = most stable.'],
+['Units of K(stab) for [Cu(H₂O)₆]²⁺ + 4Cl⁻ ⇌ [CuCl₄]²⁻ + 6H₂O?',['mol dm⁻³','dm¹² mol⁻⁴','no units','dm⁶ mol⁻²'],1,'(mol dm⁻³) / (mol dm⁻³)⁵ = dm¹² mol⁻⁴.'],
+['K(stab) with SCN⁻ is 891; with F⁻ it is 2 × 10⁵ dm³ mol⁻¹. Add F⁻ to red [Fe(SCN)(H₂O)₅]²⁺: you expect…',['No change','Red fades (F⁻ complex is more stable)','Deeper red','Precipitate'],1,'F⁻ displaces SCN⁻ because its complex is more stable (Question 7b iv).']],
+6:[['Degenerate orbitals are…',['Orbitals at the same energy level','Empty orbitals','Orbitals with paired electrons','Different shapes'],0,'In an isolated ion all five d orbitals are at the same energy.'],
+['Why is Zn²⁺ (3d¹⁰) colourless?',['d orbitals are full, no space for an electron to jump','It has no ligands','It is not a metal','It has d⁰'],0,'No empty space in higher d orbitals so no ΔE absorbed.'],
+['Why is Sc³⁺ colourless?',['3d¹⁰','3d⁰: no d electrons to excite','Too small','Always paired'],1,'Sc³⁺ is [Ar] with no d electrons.']]};
+let right=0,tot=0;
+document.querySelectorAll('.quiz').forEach(el=>{const h=Q[el.dataset.k].map((q,qi)=>`<div class="q"><b>Quick check ${qi+1}: ${q[0]}</b>${q[1].map((o,i)=>`<button class="o" data-i="${i}">${o}</button>`).join('')}<div class="why"></div></div>`).join('');el.innerHTML=h;
+ el.querySelectorAll('.q').forEach((qq,qi)=>{const d=Q[el.dataset.k][qi];let done=false;qq.querySelectorAll('.o').forEach(b=>b.onclick=()=>{if(done)return;done=true;tot++;const i=+b.dataset.i;if(i==d[2]){right++;b.classList.add('ok')}else{b.classList.add('no');qq.querySelectorAll('.o')[d[2]].classList.add('ok')}
+ const w=qq.querySelector('.why');w.style.display='block';w.textContent=(i==d[2]?'✔ Correct. ':'✘ Not quite. ')+d[3];$('score').textContent=`Score ${right}/${tot}`})})});
+/* Exam practice */
+const E=[['Q1 (4) Define: transition element, ligand, complex ion.','Transition element: has at least one ion with a partially filled d subshell. Ligand: molecule/ion with a lone pair that it donates to a metal ion (dative bond). Complex ion: a central metal ion bonded to ligands by dative bonds.'],
+['Q2 (3) Electron configurations of Fe, Co²⁺, Ti³⁺.','Fe: 1s²2s²2p⁶3s²3p⁶3d⁶4s². Co²⁺: …3d⁷ (4s electrons lost first). Ti³⁺: …3d¹ ([Ar]3d¹).'],
+['Q3 (7) Two iron compounds with different oxidation states; why complexes are coloured.','FeCl₂ (Fe +2) and FeCl₃ (Fe +3). Colour: ligands split the d orbitals into two non-degenerate sets; an electron absorbs visible light of energy ΔE = hν to jump up; the remaining light is seen as the colour.'],
+['Q4 (5) Ionic equations: NaOH added to [Cu(H₂O)₆]²⁺; excess conc NH₃ added.','a [Cu(H₂O)₆]²⁺ + 2OH⁻ → Cu(OH)₂(H₂O)₄(s) + 2H₂O. Blue solution gives pale blue precipitate.  b Cu(OH)₂(H₂O)₄ + 4NH₃ → [Cu(H₂O)₂(NH₃)₄]²⁺ + 2H₂O + 2OH⁻. Precipitate dissolves to give a deep blue solution.'],
+['Q5a (4) Why use H₂SO₄ and not HCl for KMnO₄ titration?','E(Cl₂/Cl⁻) = +1.36 V is less positive than E(MnO₄⁻/Mn²⁺) = +1.51 V, so MnO₄⁻ would oxidise Cl⁻ and use extra manganate, giving a false titre. E(SO₄²⁻/SO₂) = +0.17 V is below +1.51 V, so sulfuric acid is not oxidised. Fe³⁺/Fe²⁺ (+0.77 V) is oxidised by MnO₄⁻.'],
+['Q5b–e (13) Titration calculations (5.56 g FeSO₄·7H₂O in 250 cm³, 25.0 cm³ titrated, titre 21.2 cm³).','b M(FeSO₄·7H₂O) = 277.9. n = 5.56 / 277.9 = 0.0200 mol in 250 cm³, so [Fe²⁺] = 0.0800 mol dm⁻³.  c i MnO₄⁻ + 8H⁺ + 5Fe²⁺ → Mn²⁺ + 5Fe³⁺ + 4H₂O.  ii first permanent pale pink colour.  d n(Fe²⁺) = 0.0800 × 0.0250 = 2.00×10⁻³; n(MnO₄⁻) = 4.00×10⁻⁴; conc = 4.00×10⁻⁴ / 0.0212 = 0.0189 mol dm⁻³.  e 2MnO₄⁻ + 5SO₂ + 2H₂O → 2Mn²⁺ + 5SO₄²⁻ + 4H⁺. n(MnO₄⁻) in 25.0 cm³ = 0.0189 × 0.0250 = 4.72×10⁻⁴; n(SO₂) = 2.5 × 4.72×10⁻⁴ = 1.18×10⁻³ mol; V = 1.18×10⁻³ × 24.0 = 0.0283 dm³ = 28.3 cm³.'],
+['Q6a (7) Cu²⁺ with HCl, water, then ammonia.','i [Cu(H₂O)₆]²⁺ + 4Cl⁻ ⇌ [CuCl₄]²⁻ + 6H₂O.  ii Excess water: equilibrium shifts left (more H₂O, Le Chatelier / lower [Cl⁻]) so solution goes back to light blue.  iii NH₃ (log K 4.25) is more stable than Cl⁻ (2.80), so NH₃ displaces Cl⁻ ligands; equilibrium moves right to the deep blue ammonia complex.'],
+['Q6b (7) 1,2-diaminoethane and 1,3-diaminopropane.','i Bidentate: each molecule has two N atoms, each donating a lone pair.  ii 1,2-diaminoethane, log K 20.3 > 17.7.  iii [Ni(en)₃]²⁺: Ni at centre with three en ligands each bonded through two N atoms. The two stereoisomers are mirror images (the three en rings twist in opposite directions) and cannot be superimposed. See Scene 3.'],
+['Q7 (stability constants) Write K(stab) expressions.','i [PtCl₂(NH₃)₂] [Cl⁻]² / ([PtCl₄²⁻] [NH₃]²)  ii [[Cr(H₂O)₄Cl₂]⁺] / ([[Cr(H₂O)₆]³⁺] [Cl⁻]²)  iii [[Ni(NH₃)₄(H₂O)₂]²⁺] / ([[Ni(H₂O)₆]²⁺] [NH₃]⁴). Red Fe³⁺ complex: [Fe(SCN)(H₂O)₅]²⁺.'],
+['Q8c, Q9 Ni²⁺ 3d⁸ diagram; why Sc³⁺, Zn²⁺ colourless.','Ni²⁺: lower set (3 orbitals) each ↑↓ (6 electrons); upper set (2 orbitals) one electron each ↑ ↑ (parallel spins). Sc³⁺ is 3d⁰ (no electrons to promote). Zn²⁺ is 3d¹⁰ (no vacant space to jump into).']];
+$('ex').innerHTML=E.map(e=>`<details><summary>${e[0]}</summary><p>${e[1]}</p></details>`).join('');
+</script></body></html>
